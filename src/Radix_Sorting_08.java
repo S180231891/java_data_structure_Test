@@ -2,13 +2,14 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
-public class Radix_Sorting {
+public class Radix_Sorting_08 {
     public static void Radix(int [] s){
         //为防止数据溢出，则每个数组的大小为s.length
         //基数排序是典型的以时间换空间的排序方法
-        int[][] bix = new int[10][s.length];
+        int[][] bix = new int[10][s.length];//创建一个桶
         //为记录每个桶中实际存放的数据，定义一个一维数组来记录各个桶中每次放入的个数
         int[] temp = new int[10];//数组默认初始值为0
+        //选取数组中的最大值Arrays.stream(s).max().getAsInt()
         for (int t=1;t<Arrays.stream(s).max().getAsInt();t*=10){
             for (int i=0;i<s.length;i++){
                 int Element = s[i]/t%10;
@@ -23,7 +24,7 @@ public class Radix_Sorting {
                         s[index++] = bix[k][j];
 
                     }
-                    temp[k] = 0;
+                    temp[k] = 0;//将数组temp置空
                 }
 
             }

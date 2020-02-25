@@ -11,7 +11,7 @@ public class Select_Sorting_08 {
             for (int j=i+1; j<s.length;j++) {
                 if (temp<s[j]){//从大到小排序
                     temp = s[j];
-                    top = j;
+                    top = j;//寻找最值并记录最值所在数组的位置
                     flag = false;
                 }
             }

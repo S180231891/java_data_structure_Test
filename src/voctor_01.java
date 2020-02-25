@@ -8,9 +8,10 @@ public class voctor_01 {
         for(int i=0;i<voctor.length;i++){
             for (int j=0;j<voctor.length;j++) {
                 if (voctor[i][j] != 0)
-                    sum++;
+                    sum++;//寻找存在的点个数
             }
         }
+        //sum+1：多添加一行title
         int sparseArr[][] = new int[sum+1][3];
         sparseArr[0][0] = 11;
         sparseArr[0][1] = 11;

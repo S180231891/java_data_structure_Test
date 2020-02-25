@@ -57,6 +57,29 @@ class D_linklist{
         }
     }
 
+    public void Delete(D_HerNode node){
+        D_HerNode temp = d_herNode;
+        boolean flag = false;
+        while (true){
+            if (temp.next == null){
+                System.out.println("链表为空！！");
+                break;
+            }
+            if (temp.next.no == node.no){
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        if (flag){
+            temp.pre.next = temp.next;
+            if(temp.next!=null){
+                temp.next.pre = temp.pre;
+            }
+        }
+    }
+
+
 }
 //创建节点
 class D_HerNode{

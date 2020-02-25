@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Interpolation_Search_09 {
+    //插值搜索
     public static int InterPolation(int[] s,int left, int right, int val){
         int median = left+(right-left)*(val-s[left])/(s[right]-s[left]);
         int medianValue = s[median];

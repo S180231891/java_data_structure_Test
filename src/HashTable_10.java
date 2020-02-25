@@ -42,7 +42,7 @@ public class HashTable_10 {
 
     }
 }
-//创建哈希表，管理多条链表
+//创建哈希表，管理多条链表  3
 class HashTable{
     private EmpLink[] empLinks;
     private int size;
@@ -50,7 +50,7 @@ class HashTable{
     public HashTable(int size) {
         //TODO:能否直接使用
         this.size = size;
-        empLinks = new EmpLink[size];
+        empLinks = new EmpLink[size];//为每个哈希表初始化链表头
         //要分别初始化每一条链表
         for (int i=0;i<size;i++){
             empLinks[i] = new EmpLink();
@@ -86,7 +86,7 @@ class HashTable{
     }
 }
 
-//创建雇员
+//创建雇员  1
 class Emp{
     public Integer id;
     public String name;
@@ -105,7 +105,7 @@ class Emp{
     }
 }
 
-//创建EmpLink链表
+//创建EmpLink链表  2
 class EmpLink{
     //创建头指针
     private Emp head = null;

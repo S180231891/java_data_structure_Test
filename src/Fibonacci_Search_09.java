@@ -1,8 +1,9 @@
 import java.util.Arrays;
-
+//斐波那契数列查找
 public class Fibonacci_Search_09 {
     public static int maxSize = 20;
     public static int[] fib(){
+        //斐波那契数列
         int[] f = new int[maxSize];
         f[0] = 1;
         f[1] = 1;

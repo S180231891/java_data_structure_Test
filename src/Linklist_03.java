@@ -79,6 +79,7 @@ class LinkList{
                 //在temp后面进行添加
                 break;
             }else if (temp.next.no == node.no){
+                //不进行添加重复的数据
                 flag = true;
                 break;
             }
@@ -236,6 +237,7 @@ class HerNode{
     public String nickname;
     public HerNode next;
 
+    //构造函数
     public HerNode(int no, String name, String nickname){
         this.no = no;
         this.name = name;

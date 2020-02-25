@@ -9,7 +9,7 @@ public class Insert_Sorting_08 {
         //直接插入
         for (int i=1;i<s.length;i++){
             for (int j =0;j<i;j++){
-                if (s[j]>s[i]){
+                if (s[j]>s[i]){//构造升序数组
                     temp = s[j];
                     s[j] = s[i];
                     s[i] = temp;

@@ -5,7 +5,9 @@ import java.util.List;
 
 public class Binary_Search_09 {
     public static int Binary(int[] s, int val, int left, int right){
+
         /*
+        二分查找算法
             核心思想：
             1、确定数组的中心下标median
             2、s[median]与val进行比较

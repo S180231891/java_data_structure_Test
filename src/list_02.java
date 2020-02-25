@@ -78,7 +78,7 @@ class ArrayQuere{
         if(isFull()){
              throw new RuntimeException("队列满");
         }
-        rear++;
+        rear++;//指向-1，所以先++，在进行数据添加
         arr[rear] = n;
     }
 
@@ -87,7 +87,7 @@ class ArrayQuere{
         if(isEmpty()){
             throw new RuntimeException("队列为空");
         }
-        front++;
+        front++;//指向-1，所以先++，在进行数据添加
         return arr[front];
     }
 

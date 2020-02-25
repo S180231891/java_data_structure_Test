@@ -20,8 +20,8 @@ class One_Cycle_list{
             System.out.println("编号不符合要求，添加失败");
         HeadNode curtemp = null;
         for (int i=1;i<=nums;i++){
-            HeadNode boy = new HeadNode(i,"a"+i);
-            if (i==1){
+            HeadNode boy = new HeadNode(i,"a"+i);//添加节点
+            if (i==1){//若果节点为1，则创建一个节点
                 first = boy;
                 first.next = boy;
                 curtemp = first;
@@ -69,8 +69,9 @@ class One_Cycle_list{
         HeadNode helper = null;
         while(curtemp.next!=first)
             curtemp = curtemp.next;
-        helper = curtemp;
-        curtemp = first;
+        //找到最后一个节点位置，将其赋值给help
+        helper = curtemp;//尾
+        curtemp = first;//首
         while (helper != curtemp) {
             for (int i = 1; i <= nums - 1; i++) {
                 helper = helper.next;
@@ -78,7 +79,8 @@ class One_Cycle_list{
             }
             System.out.println(curtemp.toString());
             curtemp = curtemp.next;
-            helper.next = curtemp;//删除curtemp节点
+            // 重要步骤
+            helper.next = curtemp;//删除curtemp节点循环出圈，避免断链
         }
         System.out.println(helper);
 
