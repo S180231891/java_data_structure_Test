@@ -14,8 +14,8 @@ public class Find_Tree_11 {
         node3.setLeft(node5);
         tree.setRoot(root);
 
-        //pre
-        HeNo res =tree.Mid(5);
+        //Mid
+        HeNo res =tree.Mid(6);//判断是否找到该节点
         if (res!=null){
             System.out.println("找到该节点："+res);
         }else

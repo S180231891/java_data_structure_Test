@@ -1,3 +1,4 @@
+//编写中序线索二叉树，学习完成之后，自行编写前序、后序线索二叉树
 public class Tree_11 {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
@@ -25,13 +26,13 @@ public class Tree_11 {
     }
 }
 
-//1、创建节点HeroNode节点
+//1、创建节点HeroNode节点(树的节点)
 class HeroNode
 {
     private int no;
     private String name;
     private HeroNode left;//默认为null
-    private HeroNode right;
+    private HeroNode right;//默认为null
 
     public HeroNode(int no, String name) {
         this.no = no;

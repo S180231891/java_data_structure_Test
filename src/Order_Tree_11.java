@@ -2,7 +2,7 @@ public class Order_Tree_11 {
     public static void main(String[] args) {
         int [] s = {1,2,3,4,5,6,7};
         ArrayTree arrayTree = new ArrayTree(s);
-        arrayTree.PreOrder();
+        arrayTree.PreOrder();//前序插入节点
     }
 }
 

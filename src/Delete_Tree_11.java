@@ -71,7 +71,7 @@ class Tree{
                 ", name='" + name + '\'' +
                 '}';
     }
-    public void Node(){}
+
 
     //前序遍历
     public void pre_Tree(){
