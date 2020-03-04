@@ -15,21 +15,19 @@ public class Huffman_Tree_11 {
         }else
             System.out.println("Tree Null");
     }
-    //创建Huffman树
+    //2、创建Huffman树
     public static Node Huffman(int [] arr) {
         //为操作方便，需遍历数组
         //将数组的每个元素构建成Node
         //将Node放入到ArrayList中
         List<Node> nodeList = new ArrayList<Node>();
         for (int value:arr){
-            nodeList.add(new Node(value));
+            nodeList.add(new Node(value));//将数组中每个元素添加到构建的Node中，将Node存入ArrayList
         }
-        //进行排序，从小到大
-        Collections.sort(nodeList);
-//        System.out.println(nodeList);
-
         //取出权值最小的两颗二叉树
         while (nodeList.size()>1) {
+            Collections.sort(nodeList);//排序不可避免，必须进行排序，升序排列
+            //取出最小的两个值
             Node left = nodeList.get(0);
             Node right = nodeList.get(1);
 
@@ -44,13 +42,13 @@ public class Huffman_Tree_11 {
 
             //将新的节点newTree加入到noList中
             nodeList.add(newTree);
-            Collections.sort(nodeList);//排序不可避免，必须进行排序
 //            System.out.println(nodeList);
         }
         return nodeList.get(0);
     }
 }
 
+//1、创建node节点
 //使Node对象进行排序Collections，需创建并实现Comparable接口
 class Node implements Comparable<Node>{
     int value;//节点权值
@@ -79,6 +77,7 @@ class Node implements Comparable<Node>{
     }
 
     @Override
+    //Comparable必须实现的接口
     public int compareTo(Node o) {
         //从小到大进行排序，反之，从大到小
         return this.value-o.value;//

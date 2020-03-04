@@ -1,7 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-
+//堆排序，此处指的是大顶推
 public class Heap_Sorting_08 {
     //线性复杂度为O(nLog(n))
     public static void main(String[] args) {
@@ -25,13 +25,14 @@ public class Heap_Sorting_08 {
     public static void Heap(int [] arr){
         //最终代码
             //大顶堆构造完成
+            //i是找非叶子节点
         for (int i = arr.length/2-1;i>=0;i--){
             JustHeap(arr,i,arr.length);
         }
         //System.out.println(Arrays.toString(arr));//大顶堆输出结果
         //末尾与头进行交换
         for (int j = arr.length-1;j>0;j--){
-            int temp = arr[j];
+            int temp = arr[j];//将末尾与大顶堆头进行交换
             arr[j] = arr[0];
             arr[0] = temp;
             JustHeap(arr,0,j);//交换的数组不在参与遍历，已经是最大的数组
@@ -39,7 +40,7 @@ public class Heap_Sorting_08 {
         }
 
     }
-    //将数组调整为大顶推
+    //1、将数组调整为大顶推
 
     /**
      *完成将以 i 对应的非叶子节点的树构造成大顶堆
@@ -53,7 +54,7 @@ public class Heap_Sorting_08 {
         int temp = arr[i];//最后一个非叶子节点
         //开始调整
         //调整i节点的左子节点，以及其左子节点的左子节点。。。。。。
-        //for循环结束后，已将最大节点放在了以i为父节点的树的最顶上(此处的i不一定是root，只是局部)
+        //for循环结束后，将最大节点放在了以i为父节点的树的最顶上(此处的i不一定是root，只是局部)
         for (int k=i*2+1;k<len; k = k*2+1){
             //若左子节点小于右子节点
             if (k+1<len&& arr[k]<arr[k+1]){
