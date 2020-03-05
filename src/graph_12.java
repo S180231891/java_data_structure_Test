@@ -5,6 +5,8 @@ public class graph_12 {
     private ArrayList<String> verList;//创建存储节点的集合
     private int[][] edges;//创建图对应的邻接矩阵
     private int numedges;//边的数目
+    //定义数组flag[],标记节点是否被访问
+    private boolean [] flag;//对应节点的个数
 
     public static void main(String[] args) {
         int n = 5;//节点的个数
@@ -28,10 +30,21 @@ public class graph_12 {
     //创建构造器
     public graph_12(int n){
         //初始化矩阵和verList
-        edges = new int[n][n];
-        verList = new ArrayList<String>(n);
-        numedges = 0;
+        edges = new int[n][n];//邻接矩阵
+        verList = new ArrayList<String>(n);//创建存储节点的结合
+        numedges = 0;//记录边的数目
+        flag = new boolean[n];
     }
+    //得到第一个邻接节点的下标
+    public int getFirst(int index){
+        for (int j=0;j<verList.size();j++){
+            if (edges[index][j]>0){
+                return j;
+            }
+        }
+        return -1;
+    }
+
     //插入节点
     public void insertVerTex(String s){
         verList.add(s);
