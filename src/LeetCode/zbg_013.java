@@ -1,7 +1,7 @@
 package LeetCode;
 
 import java.util.HashMap;
-
+//罗马数字转整数
 class Solution {
     public int romanToInt(String s) {
         if (s == null || s.length() == 0)    return -1;
@@ -25,7 +25,7 @@ class Solution {
     }
 }
 
-public class zbg_003 {
+public class zbg_013 {
     public static void main(String[] args) {
         Solution s = new Solution();
         int t = s.romanToInt("IXLVIII");
