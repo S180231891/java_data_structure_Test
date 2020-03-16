@@ -23,7 +23,7 @@ public class voctor_01 {
                     if (count < sum) {
                         count++;
                         sparseArr[count][0] = i;
-                        sparseArr[count][1] = i;
+                        sparseArr[count][1] = j;
                         sparseArr[count][2] = voctor[i][j];
                     }
                 }

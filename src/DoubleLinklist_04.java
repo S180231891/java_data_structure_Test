@@ -1,3 +1,4 @@
+//双向链表
 public class DoubleLinklist_04 {
     public static void main(String [] args){
 
@@ -57,15 +58,16 @@ class D_linklist{
         }
     }
 
+    //找到待删除的节点，进行删除操作
     public void Delete(D_HerNode node){
-        D_HerNode temp = d_herNode;
+        D_HerNode temp = d_herNode.next;
         boolean flag = false;
         while (true){
-            if (temp.next == null){
+            if (temp == null){
                 System.out.println("链表为空！！");
                 break;
             }
-            if (temp.next.no == node.no){
+            if (temp.no == node.no){
                 flag = true;
                 break;
             }

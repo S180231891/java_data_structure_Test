@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//列表的构建
 public class list_02 {
     public static void main(String[] args) {
         ArrayQuere quere= new ArrayQuere(3);

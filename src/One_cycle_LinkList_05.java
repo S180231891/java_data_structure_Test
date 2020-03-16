@@ -2,7 +2,8 @@ public class One_cycle_LinkList_05 {
     public static void main(String[] args) {
         One_Cycle_list one_cycle_list = new One_Cycle_list();
         one_cycle_list.add(5);
-       // one_cycle_list.one_list();
+        one_cycle_list.one_list();
+        System.out.println("小孩循环出圈问题：");
         one_cycle_list.delete(2);//循环出圈
     }
 }
@@ -23,7 +24,7 @@ class One_Cycle_list{
             HeadNode boy = new HeadNode(i,"a"+i);//添加节点
             if (i==1){//若果节点为1，则创建一个节点
                 first = boy;
-                first.next = boy;
+                first.next = boy;//构成循环链表
                 curtemp = first;
 
 //                TODO：两种方法均是好的方法
@@ -55,6 +56,7 @@ class One_Cycle_list{
             System.out.println(curtemp.toString());
             curtemp = curtemp.next;
         }
+        System.out.println(curtemp.toString());//最后一项
 
     }
 
@@ -73,6 +75,7 @@ class One_Cycle_list{
         helper = curtemp;//尾
         curtemp = first;//首
         while (helper != curtemp) {
+            //首尾同步进行
             for (int i = 1; i <= nums - 1; i++) {
                 helper = helper.next;
                 curtemp = curtemp.next;

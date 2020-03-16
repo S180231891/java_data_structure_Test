@@ -1,3 +1,4 @@
+//数据栈：后进先出
 public class Stack_06 {
     public static void main(String[] args) {
         ArrayStack stack = new ArrayStack(5);

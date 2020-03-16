@@ -1,5 +1,5 @@
 package LeetCode;
-
+//字符串查找方法
 public class zbg_028 {
     public static void main(String[] args) {
         String v1 = "AABCB";
@@ -16,7 +16,7 @@ class zbg_28 {
         int L = needle.length(), n = haystack.length();
         for (int start = 0; start < n - L + 1; ++start) {
             if (haystack.substring(start, start + L).equals(needle)) {
-                return start;
+                return start;//使用滑动窗口进行判断
             }
         }
         return -1;

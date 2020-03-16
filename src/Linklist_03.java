@@ -211,23 +211,17 @@ class LinkList{
             System.out.println("数据表为空");
             return;
         }
-        HerNode node = null;
-        HerNode temp = head.next;
-        HerNode reverseNode = new HerNode(0,"","");
+        HerNode no = null;//辅助指针
+        HerNode temp = head.next;//指向第一个节点
+        HerNode resove = new HerNode(0,"","");
         while (temp!=null){
-            node = temp.next;
-            temp.next = reverseNode.next;
-            reverseNode.next = temp;
-            temp = node;
-
+            no = temp.next;//指向temp的下一个节点
+            temp.next = resove.next;
+            resove.next = temp;
+            temp = no;
         }
-        head.next = reverseNode.next;
+        head.next = resove.next;
     }
-
-    //TODO：百度面试代码：
-
-
-
 }
 
 

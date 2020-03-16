@@ -1,5 +1,5 @@
 package LeetCode;
-
+//从数组中删除指定的数
 public class zbg_027 {
     public static void main(String[] args) {
         int[] nums = {1,1,1,2,3,4,4,5,7};
