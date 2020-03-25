@@ -1,5 +1,6 @@
 package LeetCode;
 //二进制求和
+//TODO：不想看了 记录位置
 public class zbg_067 {
     public static void main(String[] args) {
         zbg_67 text = new zbg_67();
