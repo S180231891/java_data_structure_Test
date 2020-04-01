@@ -87,7 +87,7 @@ class Tree{
     //pre_delete
     public void Pre_Delete(int no){
         if (this.left!=null && this.left.no==no){
-            this.left = null;
+            this.left = null;//
             return;
         }
         if (this.right!=null && this.right.no==no){

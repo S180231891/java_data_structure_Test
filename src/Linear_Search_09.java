@@ -1,3 +1,4 @@
+// 线性查找
 public class Linear_Search_09 {
     public static int Linear(int [] s, int var){
         //查找到首位数就返回

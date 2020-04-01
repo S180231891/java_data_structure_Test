@@ -15,12 +15,25 @@ public class Find_Tree_11 {
         tree.setRoot(root);
 
         //Mid
-        HeNo res =tree.Mid(6);//判断是否找到该节点
+        HeNo res =tree.Mid(5);//判断是否找到该节点
         if (res!=null){
             System.out.println("找到该节点："+res);
         }else
             System.out.println("不存在");
+
+        HeNo res1 =tree.pre(5);//判断是否找到该节点
+        if (res1!=null){
+            System.out.println("找到该节点："+res1);
+        }else
+            System.out.println("不存在");
+
+        HeNo res2 =tree.Post(5);//判断是否找到该节点
+        if (res1!=null){
+            System.out.println("找到该节点："+res2);
+        }else
+            System.out.println("不存在");
     }
+
 }
 //1.定义节点
 class HeNo{

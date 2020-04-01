@@ -1,4 +1,4 @@
-//编写中序线索二叉树，学习完成之后，自行编写前序、后序线索二叉树
+//Tree的三种查找方式：Pre，Mind，Post
 public class Tree_11 {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();

@@ -1,4 +1,5 @@
 public class Binary_Sort_Tree_11 {
+    ///顺序存储二叉树
     public static void main(String[] args) {
         Bianry_Tree tree = new Bianry_Tree();
 
@@ -132,7 +133,7 @@ class Bianry_Tree{
 
     }
 
-
+    //中序遍历
     public void Min(){
         if (root!=null){
             root.MinOrder();
@@ -163,13 +164,14 @@ class TNode{
             if (this.left==null){
                 this.left= node;
             }else
-                //递归操作
+                //递归寻找需要插入的位置
                 this.left.add(node);
         }
         if (node.data>this.data){
             if (this.right==null){
                 this.right = node;
             }else
+                //递归寻找需要插入的位置
                 this.right.add(node);
         }
     }

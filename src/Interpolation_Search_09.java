@@ -1,8 +1,10 @@
 import java.util.Arrays;
 
 public class Interpolation_Search_09 {
-    //插值搜索
+    //TODO:插值搜索:median = left+(right-left)*(var-s[left])/(s[right]-s[left])
+
     public static int InterPolation(int[] s,int left, int right, int val){
+
         int median = left+(right-left)*(val-s[left])/(s[right]-s[left]);
         int medianValue = s[median];
         System.out.println("执行次数");
@@ -23,7 +25,8 @@ public class Interpolation_Search_09 {
         }
         int t = InterPolation(s,0,s.length-1,99);
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
-        int m = Binary_Search_09.Binary(s,99,0,s.length-1);
+        int m = Binary_Search_09.Binary(s,99,0,s.length-1);//输出查找值的下标
+
 
 
     }

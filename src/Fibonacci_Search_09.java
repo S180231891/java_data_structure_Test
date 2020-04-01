@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Fibonacci_Search_09 {
     public static int maxSize = 20;
     public static int[] fib(){
-        //斐波那契数列
+        //斐波那契函数数列
         int[] f = new int[maxSize];
         f[0] = 1;
         f[1] = 1;
@@ -52,6 +52,6 @@ public class Fibonacci_Search_09 {
     }
     public static void main(String[] args) {
         int[] s = {1,8,10,89,1000,1234};
-        System.out.println(Fibonacci(s,0));
+        System.out.println(Fibonacci(s,8));
     }
 }

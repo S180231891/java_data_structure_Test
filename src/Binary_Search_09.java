@@ -59,7 +59,7 @@ public class Binary_Search_09 {
     public static void main(String[] args) {
         int[] s = {1,8,10,89,1000,1000,1000,9000,1234};
         int z = Binary(s,1000,0,s.length-1);
-         ArrayList<Integer> t = Binary_Double(s,9,0,s.length-1);
+         ArrayList<Integer> t = Binary_Double(s,1000,0,s.length-1);
          System.out.println(z);
         System.out.println(t);
     }

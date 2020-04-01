@@ -42,13 +42,13 @@ public class HashTable_10 {
 
     }
 }
-//创建哈希表，管理多条链表  3
+//创建哈希表HashTable，管理多条链表  3
 class HashTable{
     private EmpLink[] empLinks;
     private int size;
 
     public HashTable(int size) {
-        //TODO:能否直接使用
+        //TODO:能否直接使用？:不能直接使用创建的链表，必须要对每一条链表进行初始化
         this.size = size;
         empLinks = new EmpLink[size];//为每个哈希表初始化链表头
         //要分别初始化每一条链表
@@ -59,7 +59,7 @@ class HashTable{
 
     public void add(Emp emp){
         //根据id添加链表
-        int selectIdLink = hashCode(emp.id);
+        int selectIdLink = hashCode(emp.id);//使用hash散列方法添加链表
         empLinks[selectIdLink].add(emp);
     }
     //遍历所有链表
@@ -121,10 +121,12 @@ class EmpLink{
         while (temp.next != null) {
             temp = temp.next;
         }
+        // 单链表
         temp.next = emp;
     }
 
     public void list(int no){
+        // no是链表的条数，list显示链表中的数据
         if (head == null){
             System.out.printf("第%d链表为空\n",no);
             return;

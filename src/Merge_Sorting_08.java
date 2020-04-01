@@ -36,6 +36,7 @@ public class Merge_Sorting_08 {
                 temp[t++] = s[j++];
             }
         }
+        //若有一方还有数据，直接加入temp中
         while (i<=median) {
             temp[t++] = s[i++];
         }
@@ -45,20 +46,21 @@ public class Merge_Sorting_08 {
 
         /*
             copy temp -->  s
-            并不是每一次都需要拷贝
+            TODO:并不是每一次都需要拷贝
          */
         t = 0;
         int tempLeft = left;
         while (tempLeft<=right){
             s[tempLeft++] = temp[t++];
         }
+        System.out.println(Arrays.toString(s));
     }
     public static void main(String[] args) {
-        // int [] s = {8,4,5,7,1,3,6,2};
-        int [] next = new int[8000000];
-        for (int i=0;i<8000000;i++){
-            next[i] =(int)(Math.random()*8000000);
-        }
+         int [] next = {8,4,5,7,1,3,6,2};
+//        int [] next = new int[8000000];
+//        for (int i=0;i<8000000;i++){
+//            next[i] =(int)(Math.random()*8000000);
+//        }
         int [] temp = new int[next.length];
         Date date1 = new Date();
         SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
@@ -69,6 +71,6 @@ public class Merge_Sorting_08 {
         String t2 = simpleDateFormat1.format(date2);
         System.out.println(t1);
         System.out.println(t2);
-        //System.out.println(Arrays.toString(next));
+//        System.out.println(Arrays.toString(next));
     }
 }

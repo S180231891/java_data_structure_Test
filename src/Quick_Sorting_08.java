@@ -50,6 +50,7 @@ public class Quick_Sorting_08 {
             l = l+1;
             r = r-1;
         }
+        System.out.println(Arrays.toString(s));
         //调用递归操作
         if (left < r){
             Quick(s,left,r);
