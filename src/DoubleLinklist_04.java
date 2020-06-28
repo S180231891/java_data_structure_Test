@@ -1,18 +1,19 @@
 //双向链表
 public class DoubleLinklist_04 {
     public static void main(String [] args){
-
+        System.out.println("双向链表代码实现");
     }
 
 }
 
 //创建类
 class D_linklist{
-    D_HerNode d_herNode = new D_HerNode(0,"","");
+    D_HerNode d_herNode = new D_HerNode(0,"","");//创建链表头节点
     public D_HerNode getD_herNode(){
         return d_herNode;
     }
 
+    //显示链表中的数据
     public void list(){
         if (d_herNode.next == null){
             System.out.println("链表为空");

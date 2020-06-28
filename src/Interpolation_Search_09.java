@@ -7,8 +7,8 @@ public class Interpolation_Search_09 {
 
         int median = left+(right-left)*(val-s[left])/(s[right]-s[left]);
         int medianValue = s[median];
-        System.out.println("执行次数");
-        //避免越界，边界必须判断
+        System.out.printf("median = %d",median);
+        //避免越界，边界必须判断(有序数组，进行插值)
         if (left>right || val<s[0] || val>s[s.length-1])
             return -1;
             if (val<medianValue){
@@ -23,12 +23,8 @@ public class Interpolation_Search_09 {
         for (int i=0;i<s.length;i++){
             s[i]=i+1;
         }
-        int t = InterPolation(s,0,s.length-1,99);
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
-        int m = Binary_Search_09.Binary(s,99,0,s.length-1);//输出查找值的下标
-
-
-
+        int t = InterPolation(s,0,s.length-1,23);
+//        int m = Binary_Search_09.Binary(s,99,0,s.length-1);//输出查找值的下标
     }
 }
 

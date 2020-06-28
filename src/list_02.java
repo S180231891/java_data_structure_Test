@@ -49,6 +49,7 @@ public class list_02 {
     }
 }
 
+//构造队列
 class ArrayQuere{
     private int maxsize;
     private int front;

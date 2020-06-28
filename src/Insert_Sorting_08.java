@@ -1,11 +1,11 @@
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-
+//直接插入排序
 public class Insert_Sorting_08 {
     public static void Insert(int [] s ){
         int temp = 0;
-        //只用一个数组，节省空间的同时没有浪费时间
+        //只用一个数组，节省空间的同时没有浪费时间(在原数组上进行插入)
         //直接插入
         for (int i=1;i<s.length;i++){
             for (int j =0;j<i;j++){
@@ -23,6 +23,7 @@ public class Insert_Sorting_08 {
     public static void main(String[] args) {
         int [] s = {17,3,-4,54,-7,5,14,20,9};
         Insert(s);
+        System.out.println(Arrays.toString(s));
         int [] next = new int[80000];
         for (int i=0;i<80000;i++){
             next[i] = (int)(Math.random()*80000);

@@ -5,9 +5,9 @@ import java.util.Date;
 public class Bubble_Sorting_08 {
     public static void Bubble(int [] s){
         int temp = 0;
-
+        //冒泡排序：倒叙排列
         for (int j = 0; j<s.length-1;j++){
-            boolean flag = true;
+            boolean flag = true;//若无交换，数列已有序
             for (int i = 0; i < s.length-1-j; i++) {
                 if (s[i] > s[i + 1]) {
                     temp = s[i];
