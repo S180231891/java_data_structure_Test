@@ -50,7 +50,7 @@ public class Quick_Sorting_08 {
             l = l+1;
             r = r-1;
         }
-        System.out.println(Arrays.toString(s));
+//        System.out.println(Arrays.toString(s));
         //调用递归操作
         if (left < r){
             Quick(s,left,r);
@@ -61,21 +61,21 @@ public class Quick_Sorting_08 {
     }
 
     public static void main(String[] args) {
-        int [] s = {-9,78,40,23,-567,70} ;
-        Quick(s,0,s.length-1);
-//        int [] next = new int[80000];
-//        for (int i=0;i<80000;i++){
-//            next[i] = (int)(Math.random()*80000);
-//        }
-//        Date date1 = new Date();
-//        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
-//        String t1 = simpleDateFormat1.format(date1);
-//        Quick(next,0,next.length-1);
-//        Date date2 = new Date();
-//        SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
-//        String t2 = simpleDateFormat1.format(date2);
-//        System.out.println(t1);
-//        System.out.println(t2);
-//        System.out.println(Arrays.toString(s));
+//        int [] s = {-9,23,78,40,23,-567,70} ;
+//        Quick(s,0,s.length-1);
+        int [] next = new int[80000];
+        for (int i=0;i<80000;i++){
+            next[i] = (int)(Math.random()*80000);
+        }
+        Date date1 = new Date();
+        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+        String t1 = simpleDateFormat1.format(date1);
+        Quick(next,0,next.length-1);
+        Date date2 = new Date();
+        SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+        String t2 = simpleDateFormat1.format(date2);
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(Arrays.toString(next));
     }
 }

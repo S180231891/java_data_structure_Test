@@ -1,4 +1,5 @@
 //Tree的三种查找方式：Pre，Mind，Post
+//前序、中序、后序
 public class Tree_11 {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();

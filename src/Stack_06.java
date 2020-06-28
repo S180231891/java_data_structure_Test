@@ -14,7 +14,7 @@ public class Stack_06 {
     }
 }
 
-
+//创造栈
 class ArrayStack{
     private int maxSize;
     private int[] stack;

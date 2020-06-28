@@ -14,6 +14,7 @@ public class Radix_Sorting_08 {
             for (int i=0;i<s.length;i++){
                 int Element = s[i]/t%10;//从低位到高位取值，放入对应的桶中
                 bix[Element][temp[Element]++] = s[i];
+//                System.out.println(Arrays.toString(temp));
             }
             for (int[] leng:bix){
                 System.out.println(Arrays.toString(leng));
@@ -27,7 +28,7 @@ public class Radix_Sorting_08 {
                 if (temp[k]!=0){
                     for (int j = 0;j<temp[k];j++){
                         s[index++] = bix[k][j];
-                        bix[k][j]=0;
+                        bix[k][j]=0;//数值取出后，清空，置为0
 
                     }
                     temp[k] = 0;//将数组temp置空

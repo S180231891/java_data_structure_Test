@@ -227,7 +227,7 @@ class LinkList{
 
 
 
-
+//创建结点
 class HerNode{
     public int no;
     public String name;

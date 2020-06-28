@@ -1,4 +1,4 @@
-// 线性查找
+// 线性查找(暴力查找算法)
 public class Linear_Search_09 {
     public static int Linear(int [] s, int var){
         //查找到首位数就返回

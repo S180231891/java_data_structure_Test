@@ -2,7 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 // 效率高
-//归并排序
+//归并排序算法实现
 public class Merge_Sorting_08 {
     //算法划分
     public static void Merge_Divide(int [] s, int left, int right,int [] temp){
@@ -17,7 +17,7 @@ public class Merge_Sorting_08 {
         }
     }
 
-    //算法合并
+    //算法合并(有序的子数组合并)
     public static void Merge(int [] s, int left, int right, int median, int [] temp){
         int i = left;//左边有序序列的初始索引
         int j = median+1;//右边有序序列的初始索引
@@ -29,6 +29,7 @@ public class Merge_Sorting_08 {
             2、若有剩余数据，直接将剩余数据依次加入temp即可
             3、将temp数据copy给s
          */
+        //升序排列
         while (i<=median && j<=right){
             if (s[i]<=s[j]){
                 temp[t++] = s[i++];

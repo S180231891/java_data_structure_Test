@@ -1,3 +1,4 @@
+//循环链表
 public class One_cycle_LinkList_05 {
     public static void main(String[] args) {
         One_Cycle_list one_cycle_list = new One_Cycle_list();
@@ -52,7 +53,7 @@ class One_Cycle_list{
             return;
         }
         HeadNode curtemp = first;
-        while (curtemp.next != first) {
+        while (curtemp.next != first) {  //判断是否循环了
             System.out.println(curtemp.toString());
             curtemp = curtemp.next;
         }
@@ -76,14 +77,14 @@ class One_Cycle_list{
         curtemp = first;//首
         while (helper != curtemp) {
             //首尾同步进行
-            for (int i = 1; i <= nums - 1; i++) {
+            for (int i = 1; i <= nums - 1; i++) {//有间隔的进行出圈
                 helper = helper.next;
                 curtemp = curtemp.next;
             }
             System.out.println(curtemp.toString());
             curtemp = curtemp.next;
             // 重要步骤
-            helper.next = curtemp;//删除curtemp节点循环出圈，避免断链
+            helper.next = curtemp;//删除curtemp节点循环出圈，避免断链(封闭圈)
         }
         System.out.println(helper);
 

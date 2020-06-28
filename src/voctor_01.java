@@ -12,7 +12,7 @@ public class voctor_01 {
             }
         }
         //sum+1：多添加一行title
-        int sparseArr[][] = new int[sum+1][3];
+        int[][] sparseArr = new int[sum+1][3];
         sparseArr[0][0] = 11;
         sparseArr[0][1] = 11;
         sparseArr[0][2] = sum;

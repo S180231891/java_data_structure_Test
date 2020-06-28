@@ -2,7 +2,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//二分查找搜索数值：递归方式进行查找
 public class Binary_Search_09 {
     public static int Binary(int[] s, int val, int left, int right){
 
@@ -27,7 +27,7 @@ public class Binary_Search_09 {
         }else if (val<medianValue){
             return Binary(s,val,left,median-1);
         }else
-            return median;
+            return median;//刚好在中心
 
     }
     //查找多个相同的数值
